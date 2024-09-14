@@ -1,0 +1,78 @@
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+$card-border-color: gray;
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+:root {
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 1rem;
+  --font-size-base: 1.25rem;
+  --font-size-md: 1.5rem;
+  --font-size-lg: 2rem;
+  --font-size-xl: 2.5rem;
+  --font-size-xxl: 2.5rem;
+
+  --font-weight-thin: 100;
+  --font-weight-extralight: 200;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  --font-weight-black: 900;
+
+  --bg-dark: #121212;
+  --bg-light: #f0f0f0;
+  --text-dark: #121212;
+  --text-light: #f0f0f0;
+  --text-dark-2: #1b1b1b;
+
+  --card-border-color: gray;
+  --card-border-radius: 1rem;
+
+  --color-primary: #121212;
+  --color-secondary: #f0f0f0;
+  --color-tertiary: #1b1b1b;
+  --color-accent: #f0f0f0;
+  --color-accent-2: #1b1b1b;
+
+  // @media screen and (width < 768px) {
+  //   --font-size-xs: calc(var(--font-size-xs) * 0.75); // 0.75rem;
+  // --font-size-sm: 1rem;
+  // --font-size-base: 1.25rem;
+  // --font-size-md: 1.5rem;
+  // --font-size-lg: 2rem;
+  // --font-size-xl: 2.5rem;
+  // --font-size-xxl: 2.5rem;
+  // }
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    font-size: 14px;
+  }
+}
+
+// body {
+//   background-color: var(--bg-dark);
+//   color: var(--text-light);
+// }
+
+.has-box-shadow {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}

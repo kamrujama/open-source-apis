@@ -1,0 +1,7 @@
+<div class="shadow-md hover:bg-slate-700 text-gray-300 hover:text-gray-100 hover:shadow-2xl p-5 rounded-lg cursor-pointer size-80 flex flex-col gap-6" (click)="navigateTo(cardData.route)">
+  <div class="header flex gap-4 items-center">
+    <div class="icon text-xl"><i class="{{cardData.icon}}"></i></div>
+    <div class="title text-xl font-medium">{{cardData.name}}</div>
+  </div>
+  <div class="body font-light">{{cardData.description}}</div>
+</div>

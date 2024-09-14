@@ -1,0 +1,20 @@
+.card-layout {
+  padding: 4rem;
+  align-items: center;
+  margin: 1rem;
+  box-shadow: 5px 5px 15px gray;
+  background-color: dimgrey;
+}
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+mat-card {
+  max-width: 15rem ;
+}
+
+

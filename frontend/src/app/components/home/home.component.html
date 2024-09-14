@@ -1,0 +1,15 @@
+<!-- card section -->
+<section class="p-10 my-6">
+  <!-- Landing Page -->
+  <app-landing-page></app-landing-page>
+
+  <!-- Api Cards Links -->
+  <div class="links-wrapper flex flex-col justify-center items-center">
+    <h1 class="text-5xl font-bold text-gray-300">Explore our Free Open Source APIs at one place</h1>
+    <div class="grid grid-cols-4 gap-4 place-content-stretch p-10 h-full w-5/6 my-6 rounded-lg">
+      @for (card of apiCards; track card.name) {
+          <app-card [cardData]="card"></app-card>
+        }
+    </div>
+  </div>
+</section>
