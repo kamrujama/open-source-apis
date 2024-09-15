@@ -6,7 +6,7 @@
   <!-- Api Cards Links -->
   <div class="links-wrapper flex flex-col justify-center items-center">
     <h1 class="text-5xl font-bold text-gray-300">Explore our Free Open Source APIs at one place</h1>
-    <div class="grid grid-cols-4 gap-4 place-content-stretch p-10 h-full w-5/6 my-6 rounded-lg">
+    <div class="flex flex-wrap justify-center gap-4 place-content-stretch p-10 h-full w-5/6 my-6 rounded-lg">
       @for (card of apiCards; track card.name) {
           <app-card [cardData]="card"></app-card>
         }
