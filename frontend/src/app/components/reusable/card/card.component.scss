@@ -17,4 +17,15 @@ mat-card {
   max-width: 15rem ;
 }
 
+.active {
+  animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+  to {
+    transform: scale(2);
+    
+  }
+}
+
 

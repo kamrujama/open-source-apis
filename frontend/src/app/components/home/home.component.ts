@@ -27,14 +27,18 @@ export class HomeComponent implements OnInit {
   constructor(private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.route.params.subscribe(param => {
-      if (!param['apiName']) {
-        this.router.navigateByUrl('/');
-      } else {
-        switch (param['apiName']) {
-          default: this.router.navigateByUrl('/something-wrong');
-        }
-      }
-    })
+    // this.route.params.subscribe(param => {
+    //   if (!param['apiName']) {
+    //     this.router.navigateByUrl('/');
+    //   } else {
+    //     switch (param['apiName']) {
+    //       case '/json-formatter':{
+    //         this.router.navigateByUrl('api/json-formatter')
+    //         break;
+    //       }
+    //       default: this.router.navigateByUrl('/something-wrong');
+    //     }
+    //   }
+    // })
   }
 }
