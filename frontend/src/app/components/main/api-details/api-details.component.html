@@ -1,0 +1,23 @@
+
+<div class="min-h-screen w-screen flex" #apiDetailsRef>
+    <div class="bg-slate-700 w-fit h-screen gap=6 flex-col py-8 px-10">
+        <!-- Menus -->
+        @for(cardData of cardMenuData; track cardData.name) {
+        <div class="header sidebar flex gap-4 p-4 my-2 text-slate-300 hover:text-white hover:bg-slate-400 rounded-md  items-center cursor-pointer"
+            routerLink="{{cardData.route}}" routerLinkActive="router-link-active">
+            <div class="icon text-xl"><i class="{{cardData.icon}}"></i></div>
+            @if(!isMenuCollapse) {
+            <div class="title text-lg font-medium">{{cardData.name}}</div>
+            }
+        </div>
+        }
+        <div 
+            class="flex items-center expand-collapse relative justify-center w-12 h-12 border-2 border-slate-400 rounded-full"
+            (click)="toggleMenuCollapse()">
+            <i #expandCollapse class="fa-solid fa-chevron-up expandCollapseIcon"></i>
+        </div>
+    </div>
+    <div class="container w-screen bg-slate-50 flex items-center justify-center">
+        <router-outlet></router-outlet>
+    </div>
+</div>

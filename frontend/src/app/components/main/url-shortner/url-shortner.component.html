@@ -1,0 +1,46 @@
+<div class="container">
+    <header class="p-10">
+        <h1>Url Shortner</h1>
+        <p>Simplify Your Links</p>
+    </header>
+
+    <main>
+        <form [formGroup]="reactiveForm">
+            <div class="form-group">
+                <label for="longUrl">Enter the long URL here...</label>
+                <input type="url" id="longUrl" formControlName="longUrl" placeholder="https://example.com/very/long/url"/>
+            </div>
+
+            <div class="form-group">
+                <label for="customAlias">Custom alias (optional)</label>
+                <input type="text" id="customAlias" formControlName="customAlias" placeholder="myalias" />
+                <small>Example: short.ly/{{ customAlias || 'myalias' }}</small>
+            </div>
+
+            <div class="form-group">
+                <label for="expiration">Expiration Time</label>
+                <select id="expiration" formControlName="expiration">
+                    <option value="1d">1 Day</option>
+                    <option value="1w">1 Week</option>
+                    <option value="1m">1 Month</option>
+                    <option value="never">No Expiration</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="analytics">Enable Analytics</label>
+                <input type="checkbox" id="analytics" formControlName="analytics" />
+            </div>
+
+            <button (click)="shortenUrl()">Shorten URL</button>
+
+            @if(shortenedUrl){
+            <div class="result">
+                <label>Your Shortened URL:</label>
+                <input type="text" [value]="shortenedUrl" readonly #shortUrlInput />
+            </div>
+            }
+
+        </form>
+    </main>
+</div>

@@ -1,0 +1,24 @@
+
+  <div class="container">
+    <h1>JSON Converter</h1>
+    
+    <!-- Input JSON Area -->
+    <div class="input-section">
+      <h3>Input JSON</h3>
+      <textarea [(ngModel)]="jsonInput" id="jsonInput" [ngClass]="{'danger-text':invalidJson}" placeholder="Paste or write your JSON here"></textarea>
+    </div>
+    
+    <!-- Buttons -->
+    <div class="button-group">
+      <button (click)="formatJson()"  class="btn">Format JSON</button>
+      <button (click)="minifyJson()" class="btn">Minify JSON</button>
+      <button (click)="clearInput()" class="btn">Clear</button>
+    </div>
+
+    <!-- Output JSON Area -->
+    <div class="output-section">
+      <h3>Output JSON</h3>
+      <textarea [value]="jsonOutput" id="jsonOutput" placeholder="Formatted or Minified JSON will appear here" [ngClass]="{'danger-text':invalidJson}"  readonly></textarea>
+    </div>
+  </div>
+
