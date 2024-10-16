@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { BehaviorSubject, Observable, of } from "rxjs";
+import { BehaviorSubject, from, Observable, of } from "rxjs";
 
 @Injectable({
   providedIn: "root"
@@ -14,12 +14,20 @@ export class EventService {
   }
 
   getShortUrl(url: string): Observable<any> {
-      fetch(url).then((response)=>{
-         return of(response);
-      }).catch(()=>{
-        
-      })
-    return of(null)
+    // Convert fetch promise to an Observable using 'from'
+    return from(
+      fetch(url, { mode: 'cors' })
+        .then((response) => {
+          if (response.ok) {
+            return response.json(); // Assuming the response is JSON
+          }
+          throw new Error('Network response was not ok');
+        })
+        .catch((error) => {
+          console.error('Fetch error:', error);
+          return of(null); // Return a fallback value in case of an error
+        })
+    );
   }
 
   

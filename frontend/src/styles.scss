@@ -41,6 +41,7 @@ $card-border-color: gray;
   --text-dark: #121212;
   --text-light: #f0f0f0;
   --text-dark-2: #1b1b1b;
+  --test-danger: #FF0000;
 
   --card-border-color: gray;
   --card-border-radius: 1rem;
@@ -50,6 +51,7 @@ $card-border-color: gray;
   --color-tertiary: #1b1b1b;
   --color-accent: #f0f0f0;
   --color-accent-2: #1b1b1b;
+
 
   // @media screen and (width < 768px) {
   //   --font-size-xs: calc(var(--font-size-xs) * 0.75); // 0.75rem;
@@ -66,6 +68,10 @@ $card-border-color: gray;
   :root {
     font-size: 14px;
   }
+}
+
+.danger-text{
+  color: var(--test-danger);
 }
 
 // body {
